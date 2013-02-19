@@ -7,14 +7,10 @@ except ImportError:
     import ez_setup
     ez_setup.use_setuptools()
     from setuptools import setup, find_packages
-    
-import os
-
-from PyRQ import getVersionString
 
 setup(
-    name = "PyRQ",
-    version = getVersionString(),
+    name = "pydependschecker",
+    version = "0.1",
     url = 'https://github.com/sys-git/pydependschecker',
     packages = find_packages(),
     package_dir = {'pydependschecker': 'pydependschecker'},
