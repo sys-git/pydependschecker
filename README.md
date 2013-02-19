@@ -14,3 +14,6 @@ Checks for:
 
 The resultant graph can then have a mapping
 applied (in the form {int_id: objN}) and the resultant graph returned: [obj1:[obj2, obj3], obj1:[obj2, obj5]].
+
+Alternatively you can use the DependencyChecker instance to act as a psudo generator
+by using the next(), recycle() and satisfy() methods.
