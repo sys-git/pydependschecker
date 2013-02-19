@@ -4,7 +4,7 @@ Created on 19 Feb 2013
 @author: Francis
 '''
 
-from pydependschecker.Checker import Checker, NoRootException, \
+from pydependschecker import Checker, NoRootException, \
     CircularDependencyException, SelfDependencyException, \
     UnsatisfiedDependencyException
 import itertools
@@ -45,6 +45,8 @@ class Test(unittest.TestCase):
             assert dc.independents==indis, "Different independent uIds: %(A)s to that expected: %(E)s"%{"A":dc.independents, "E":indis}
             #    Check the maxDepth:
             maxDepth = Checker.maxDepth(dc.allHierarchies)
+            depth = dc.depthMax
+            assert maxDepth==depth
             assert maxDepth==eMaxDepth, "Max depth: %(A)s is different to that expected: %(E)s"%{"A":maxDepth, "E":eMaxDepth}
             return (items, dc.independents, dc.allHierarchies, dc.dependencyMap)
     def testUnsatisfiedDependency(self):

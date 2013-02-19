@@ -236,11 +236,15 @@ class Checker(object):
     def getPending(self):
         with self._lock:
             return frozenset((tuple(self._pending)))
+    def getMaxDepth(self):
+        with self._lock:
+            return Checker.maxDepth(self.allHierarchies)
     independents = property(getIndependents)
     allHierarchies = property(getallHierarchies)
     dependencyMap = property(getDependencyMap)
     satisfied = property(getSatisfied)
     pending = property(getPending)
+    depthMax = property(getMaxDepth)
     def next(self):
         r"""
         @summary: Return the next independent:
