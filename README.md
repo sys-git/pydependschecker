@@ -28,37 +28,37 @@ uId: 6 depends on uIds: 1, 3 and 4
 
     dc = Checker.verify([1, 2, 3, (4, [1, 2]), (5, [1, 4]), (6, [1, 3, 4])])
     dc.next()
-  > 1
+    > 1
     dc.next()
-  > 2
+    > 2
     dc.next()
-  > 3
+    > 3
     dc.next()
-  > NoRootException
+    > NoRootException
     dc.pending
-  > [1, 2, 3]
+    > [1, 2, 3]
     dc.recycle(1)
     dc.next()
-  > 1
+    > 1
     dc.next()
-  > NoRootException
+    > NoRootException
     dc.satisfy(1)
     dc.pending
-  > [2, 3]
+    > [2, 3]
     dc.next()
-  > NoRootException
+    > NoRootException
     dc.satisfy(2)
     dc.next()
-  > 4
+    > 4
     dc.satisfy(3)
     dc.next()
-  > NoRootException
+    > NoRootException
     dc.satisfy(4)
     dc.satisfy(5)
     dc.satisfy(6)
     dc.next()
-  > NoRootException
+    > NoRootException
     dc.pending
-  > []
+    > []
     dc.satisfied
-  > [1, 2, 3, 4, 5, 6]
+    > [1, 2, 3, 4, 5, 6]
