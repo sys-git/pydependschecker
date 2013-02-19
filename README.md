@@ -26,7 +26,14 @@ uId: 4 depends on uIds: 1 and 2
 uId: 5 depends on uIds: 1 and 4
 uId: 6 depends on uIds: 1, 3 and 4
 
+    from pydependschecker import Checker, NoRootException, CircularDependencyException,
+    SelfDependencyException, UnsatisfiedDependencyException
+ 
     dc = Checker.verify([1, 2, 3, (4, [1, 2]), (5, [1, 4]), (6, [1, 3, 4])])
+    Checker.maxDepth(dc.allHierarchies)
+    > 3
+    dc.depthMax
+    > 3
     dc.next()
     > 1
     dc.next()
