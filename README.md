@@ -69,3 +69,7 @@ uId: 6 depends on uIds: 1, 3 and 4
     > []
     dc.satisfied
     > [1, 2, 3, 4, 5, 6]
+
+In case you're feeling generous:
+LTC: LT636SrauWAz9XDz2EKxAXQ5jKqehyhR69
+BTC: 13vS6cvzZXf1Yxrar2SYSPQrFLSEwLePV4
